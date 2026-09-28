@@ -1,0 +1,52 @@
+/* =========================================================
+   TÙY CHỈNH MÀU SẮC & PHONG CÁCH MATERIAL DESIGN CODEGYM
+========================================================= */
+
+:root {
+  --codegym-blue: #00adee;
+  --codegym-dark-blue: #0081b4;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Custom Colors */
+.bg-codegym {
+  background-color: var(--codegym-blue) !important;
+}
+
+.text-codegym {
+  color: var(--codegym-blue) !important;
+}
+
+.btn-info {
+  background-color: var(--codegym-blue) !important;
+  color: #ffffff !important;
+}
+
+/* Hero Section Image Background */
+.intro-hero {
+  background: url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1350&q=80")
+    no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* Material Design Card Hover Effect */
+.hoverable {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hoverable:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* Adjustment for navbar overlap */
+section {
+  scroll-margin-top: 60px;
+}
