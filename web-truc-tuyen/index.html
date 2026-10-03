@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoạt Hình Vietsub - Web Xem Phim Cho Bé</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER CỐ ĐỊNH -->
+    <header class="header">
+      <div class="logo">
+        <h2>🍿 ActivityKids</h2>
+      </div>
+
+      <!-- Thanh tìm kiếm -->
+      <div class="search-bar">
+        <input type="text" placeholder="Tìm kiếm phim hoạt hình..." />
+        <button type="button">Tìm kiếm</button>
+      </div>
+
+      <!-- HEAD-LINK: Các liên kết trang -->
+      <nav class="head-link">
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Phim Mới</a></li>
+          <li><a href="#">Xem Nhiều</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CONTAINER NỘI DUNG CHÍNH -->
+    <div class="main-container">
+      <!-- LEFT CONTENT: Menu danh sách video -->
+      <aside class="left-content">
+        <h3>Danh Sách Phim</h3>
+        <ul class="video-list">
+          <li class="active">
+            <a href="#video1">1. Doraemon - Thẻ Cánh Cửa Thần Kỳ</a>
+          </li>
+          <li><a href="#video2">2. Tom & Jerry - Tập Đặc Biệt</a></li>
+          <li><a href="#video3">3. Pokémon Vietsub - Hành Trình Mới</a></li>
+          <li><a href="#video4">4. Conan - Tập Phim Thuyết Minh</a></li>
+        </ul>
+      </aside>
+
+      <!-- RIGHT CONTENT: Khu vực phát video -->
+      <main class="right-content">
+        <h2>Đang phát: Doraemon - Thẻ Cánh Cửa Thần Kỳ</h2>
+
+        <!-- Video 1: Sử dụng <iframe> nhúng từ YouTube (Hoạt hình Vietsub) -->
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Video hoạt hình YouTube"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+
+        <!-- Video 2: Sử dụng thẻ <video> HTML5 trực tiếp -->
+        <h3 style="margin-top: 30px">
+          Video xem trước (Thẻ &lt;video&gt; HTML5)
+        </h3>
+        <div class="local-video-container">
+          <video
+            controls
+            poster="https://via.placeholder.com/800x450?text=Trailer+Hoat+Hinh"
+          >
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Trình duyệt của bạn không hỗ trợ phát video HTML5.
+          </video>
+        </div>
+
+        <!-- Mô tả thông tin phim -->
+        <div class="video-info">
+          <h3>Mô tả phim</h3>
+          <p>
+            Bộ phim hoạt hình được chọn lọc kĩ lưỡng với nội dung giáo dục nhẹ
+            nhàng, thuyết minh tiếng Việt chuẩn Full HD 1080p dành cho các bé.
+            Không chứa quảng cáo độc hại!
+          </p>
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER: Thông tin bản quyền -->
+    <footer class="footer">
+      <p>
+        &copy; 2026 HoatHinhKid. All rights reserved. Trang web xem phim hoạt
+        hình an toàn cho trẻ em.
+      </p>
+    </footer>
+  </body>
+</html>
