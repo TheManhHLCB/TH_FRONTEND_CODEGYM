@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành - Tạo Menu Ngang Dropdown</title>
+    <style>
+      /* 1. Thiết lập phông chữ và định dạng chung */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      /* 2. Cấu hình phân vùng khung menu */
+      #menu {
+        height: 40px;
+        background-color: #333;
+        border-bottom: 2px solid #222;
+      }
+
+      /* Bỏ chấm đầu dòng cho danh sách ul */
+      #menu ul {
+        list-style: none;
+        position: relative;
+      }
+
+      /* 3. Định danh từng mục li xếp nằm ngang */
+      #menu > ul > li {
+        float: left; /* Đẩy các thẻ li nằm ngang trên 1 hàng */
+        position: relative;
+      }
+
+      /* 4. Định dạng thẻ liên kết a trong menu */
+      #menu a {
+        display: block;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* 5. Hiệu ứng đổi màu khi rê chuột qua liên kết */
+      #menu a:hover {
+        background-color: red;
+      }
+
+      /* 6 & 7. Vị trí và ẩn menu con (Dropdown) */
+      #menu ul ul {
+        position: absolute;
+        top: 40px; /* Hiển thị ngay phía dưới thanh menu cha */
+        left: 0;
+        background-color: #333;
+        visibility: hidden; /* Ẩn menu con mặc định */
+        z-index: 1000;
+      }
+
+      /* Xếp dọc lại các mục chọn trong menu con */
+      #menu ul ul li {
+        float: none;
+      }
+
+      /* 8. Hiển thị menu con khi rê chuột vào mục menu cha */
+      #menu ul li:hover > ul {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cấu trúc Menu ngang 2 cấp -->
+    <div id="menu">
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li>
+          <a href="#">Sản phẩm</a>
+          <ul>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">Điện thoại</a></li>
+            <li><a href="#">Phụ kiện</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Dịch vụ</a>
+          <ul>
+            <li><a href="#">Bảo hành</a></li>
+            <li><a href="#">Sửa chữa</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
